@@ -1,0 +1,11 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.bg-navbar {
+  background-color: rgb(0, 151, 252);
+}
+
+.btn-fa{
+  cursor: pointer;
+}
