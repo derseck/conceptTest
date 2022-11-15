@@ -1,0 +1,43 @@
+.inputWidth {
+    width: 80%;
+}
+
+.row {
+    display: flex;
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    width: 100%;
+    max-width: 100%;
+}
+
+.col {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    flex: 1 0 0%;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+table {
+    width: 100%;
+    margin-top: 5px;
+}
+
+th {
+    width: 20%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}

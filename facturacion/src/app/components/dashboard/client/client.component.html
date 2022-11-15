@@ -1,0 +1,68 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Clientes</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button routerLink="/dashboard/crear-cliente" aria-label="Agregar cliente" matTooltip="Agregar cliente">
+            <mat-icon>add_circle</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <div *ngIf="listClient.length > 0">
+        <mat-form-field appearance="standard">
+            <mat-label>Buscar</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="" #input autocomplete="off">
+        </mat-form-field>
+    
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource" matSort>
+    
+                <ng-container matColumnDef="cc">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> CC </th>
+                  <td mat-cell *matCellDef="let element"> {{element.cc}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="nombres">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombres </th>
+                  <td mat-cell *matCellDef="let element"> {{element.nombres}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="apellidos">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Apellidos </th>
+                  <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="telefono">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Telefono </th>
+                  <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
+                </ng-container>
+        
+                <ng-container matColumnDef="acciones">
+                    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+                    <td mat-cell *matCellDef="let element"> 
+                        <a class="pointer" (click)="detalleCliente(element)" matTooltip="Ver cliente" style="color: #033349;">
+                            <mat-icon>search</mat-icon>
+                        </a>
+                        <a class="pointer" (click)="comprasCliente(element)" matTooltip="Ver compras" style="color: #000000;">
+                            <mat-icon>manage_search</mat-icon>
+                        </a>
+                        <a class="pointer" (click)="editarCliente(element)" matTooltip="Editar cliente" style="color: #024719;">
+                            <mat-icon>edit</mat-icon>
+                        </a>
+                        <a class="pointer" (click)="eliminarCliente(element.id)" matTooltip="Eliminar cliente" style="color: #ff0000f8;">
+                            <mat-icon>delete</mat-icon>
+                        </a>
+                    </td>
+                  </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+        </div>
+    </div>
+
+    <div *ngIf="listClient.length == 0">
+        <br>
+        <h2> No hay clientes </h2>
+    </div>
+</div>

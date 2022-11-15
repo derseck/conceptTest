@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+    margin-top: 5px;
+}
+
+th {
+    width: 20%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    width: 100%;
+    max-width: 100%;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}

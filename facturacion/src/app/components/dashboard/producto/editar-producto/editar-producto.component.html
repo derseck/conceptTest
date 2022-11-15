@@ -1,0 +1,50 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Editar Producto</span>
+    </mat-toolbar>
+
+    <mat-card style="margin-top: 10px;">
+        <form [formGroup]="form" (ngSubmit)="editarProducto()">
+            <input type="hidden" formControlName="id">
+            <mat-grid-list cols="4" rowHeight="50px">
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="inputWidth" appearance="fill">
+                        <mat-label>Referencia</mat-label>
+                        <input matInput formControlName="referencia" placeholder="" value="">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="5">
+                    <img src="./assets/img/usuario.png" width="35%" alt="user_img">
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="inputWidth" appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput formControlName="nombre" placeholder="" value="">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="inputWidth" appearance="fill">
+                        <mat-label>Descripcion</mat-label>
+                        <input matInput formControlName="descripcion" placeholder="" value="">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="inputWidth" appearance="fill">
+                        <mat-label>Cantidad</mat-label>
+                        <input matInput formControlName="cantidad" placeholder="" value="">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="inputWidth" appearance="fill">
+                        <mat-label>Precio</mat-label>
+                        <input matInput formControlName="precio" placeholder="" value="">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <button mat-raised-button (click)="volver()" style="margin-right: 15px;">Volver</button>
+                    <button type="submit" mat-raised-button [disabled]="form.invalid" color="primary">Guardar</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+</div>

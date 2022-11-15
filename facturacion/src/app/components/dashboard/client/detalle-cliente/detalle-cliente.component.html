@@ -1,0 +1,42 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Detalle Cliente</span>
+    </mat-toolbar>
+
+    <mat-card style="margin-top: 10px;">
+        <form [formGroup]="form">
+            <mat-grid-list cols="4" rowHeight="50px">
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="inputWidth" appearance="fill">
+                        <mat-label>CC</mat-label>
+                        <input matInput [readonly]="true" formControlName="cc" value="">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="5">
+                    <img src="./assets/img/usuario.png" width="35%" alt="user_img">
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="inputWidth" appearance="fill">
+                        <mat-label>Nombres</mat-label>
+                        <input matInput [readonly]="true" formControlName="nombres" value="">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="inputWidth" appearance="fill">
+                        <mat-label>Apellidos</mat-label>
+                        <input matInput [readonly]="true" formControlName="apellidos" value="">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="inputWidth" appearance="fill">
+                        <mat-label>Telefono</mat-label>
+                        <input matInput [readonly]="true" formControlName="telefono" value="">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <button mat-raised-button (click)="volver()" style="margin-right: 15px;">Volver</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+</div>
