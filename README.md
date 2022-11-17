@@ -14,6 +14,6 @@ Lo que primero debemos hacer es descargar los archivos de las tres plantillas(An
 
 El repositorio está compuesto por tres carpetas:
 
-- Django: carpeta que almacena la plantilla en django y es encargada del Back-End
+- Django: carpeta que almacena la plantilla en Django y es encargada del Back-End
 - Facturación: carpeta que almacena la plantilla en Angular, es una de las opciones de Front-End
-- Test: carpeta que almacena la plantilla en Angular, es una de las opciones de Front-End
+- Test: carpeta que almacena la plantilla en React, es una de las opciones de Front-End
