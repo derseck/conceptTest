@@ -17,3 +17,28 @@ El repositorio está compuesto por tres carpetas:
 - Django: carpeta que almacena la plantilla en Django y es encargada del Back-End
 - Facturación: carpeta que almacena la plantilla en Angular, es una de las opciones de Front-End
 - Test: carpeta que almacena la plantilla en React, es una de las opciones de Front-End
+
+A continuacion, ingresamos a la carpeta Django y ejecutamos el siguientes comandos:
+
+```
+docker-compose up
+```
+
+En otro terminal ejecutamos los comandos:
+
+```
+make makemigrations
+make migrate
+```
+
+A continuacion, ingresamos a la carpeta Facturacion y ejecutamos el siguientes comandos:
+
+```
+npm install
+```
+
+A continuacion, ingresamos a la carpeta Facturacion y ejecutamos el siguientes comandos:
+
+```
+npm install
+```
