@@ -5,6 +5,8 @@
 - Instalar NodeJs: https://nodejs.org/en/
 - Instalar Angular CLI mediante el siguiente comando en una terminal: npm install -g @angular/cli
 - React no necesita ser instalado basta con instalar NodeJs
+- Instalar docker desktop: https://www.docker.com/
+- instalar make para windows mediante el siguiente comando: choco install make
 
 ## Compilación
 
@@ -18,7 +20,7 @@ El repositorio está compuesto por tres carpetas:
 - Facturación: carpeta que almacena la plantilla en Angular, es una de las opciones de Front-End
 - Test: carpeta que almacena la plantilla en React, es una de las opciones de Front-End
 
-A continuacion, ingresamos a la carpeta Django y ejecutamos el siguientes comandos:
+A continuacion, ingresamos a la carpeta Django y ejecutamos el siguiente comando:
 
 ```
 docker-compose up
@@ -27,9 +29,13 @@ docker-compose up
 En otro terminal ejecutamos los comandos:
 
 ```
-make makemigrations
-make migrate
+docker ps
+docker exec -it project_name bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
 ```
+El comando createsuperuser les pedira nombre de usuario, correo y contraseña, este sera el usuario administrador de Django(yo uso usr:admin y psw:admin)
 
 A continuacion, ingresamos a la carpeta Facturacion y ejecutamos el siguientes comandos:
 
