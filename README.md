@@ -41,10 +41,13 @@ A continuacion, ingresamos a la carpeta Facturacion y ejecutamos el siguientes c
 
 ```
 npm install
+ng s
 ```
+Nota: en caso de que les aparesca un error "ng : No se puede cargar el archivo C:\Users\user\AppData\Roaming\npm\ng.ps1 porque la ejecución de scripts está deshabilitada en este sistema." deberemos abrir la powershell en modo administrador y ejecutar el comando: Set-ExecutionPolicy Unrestricted
 
 A continuacion, ingresamos a la carpeta Facturacion y ejecutamos el siguientes comandos:
 
 ```
 npm install
+npm start
 ```
